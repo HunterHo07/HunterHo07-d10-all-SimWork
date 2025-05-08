@@ -1,0 +1,25 @@
+1:"$Sreact.fragment"
+2:I[9697,["694","static/chunks/694-8dd55d8bc1b85760.js","874","static/chunks/874-6052627df6fde20c.js","177","static/chunks/app/layout-320b6950676604d5.js"],"default"]
+3:I[7555,[],""]
+4:I[1295,[],""]
+5:I[1024,["694","static/chunks/694-8dd55d8bc1b85760.js","874","static/chunks/874-6052627df6fde20c.js","345","static/chunks/app/not-found-4ea6127ea371c2b6.js"],"default"]
+6:I[8317,["694","static/chunks/694-8dd55d8bc1b85760.js","874","static/chunks/874-6052627df6fde20c.js","177","static/chunks/app/layout-320b6950676604d5.js"],"default"]
+7:I[894,[],"ClientPageRoot"]
+8:I[966,["694","static/chunks/694-8dd55d8bc1b85760.js","874","static/chunks/874-6052627df6fde20c.js","105","static/chunks/app/dashboard/page-2bd33e1d750be734.js"],"default"]
+b:I[9665,[],"MetadataBoundary"]
+d:I[9665,[],"OutletBoundary"]
+10:I[4911,[],"AsyncMetadataOutlet"]
+12:I[9665,[],"ViewportBoundary"]
+14:I[6614,[],""]
+:HL["/d10-all-SimWork/_next/static/css/c1e56172ff36689b.css","style"]
+0:{"P":null,"b":"tb6EPS_LzlijZXQfyyj28","p":"/d10-all-SimWork","c":["","dashboard",""],"i":false,"f":[[["",{"children":["dashboard",{"children":["__PAGE__",{}]}]},"$undefined","$undefined",true],["",["$","$1","c",{"children":[[["$","link","0",{"rel":"stylesheet","href":"/d10-all-SimWork/_next/static/css/c1e56172ff36689b.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}]],["$","html",null,{"lang":"en","children":["$","body",null,{"className":"__variable_25390e __variable_f78f2e antialiased min-h-screen flex flex-col","children":[["$","div",null,{"className":"grid-lines"}],["$","$L2",null,{}],["$","main",null,{"className":"flex-grow","children":["$","$L3",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L4",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":[["$","$L5",null,{}],[]],"forbidden":"$undefined","unauthorized":"$undefined"}]}],["$","$L6",null,{}]]}]}]]}],{"children":["dashboard",["$","$1","c",{"children":[null,["$","$L3",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L4",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]]}],{"children":["__PAGE__",["$","$1","c",{"children":[["$","$L7",null,{"Component":"$8","searchParams":{},"params":{},"promises":["$@9","$@a"]}],["$","$Lb",null,{"children":"$Lc"}],null,["$","$Ld",null,{"children":["$Le","$Lf",["$","$L10",null,{"promise":"$@11"}]]}]]}],{},null,false]},null,false]},null,false],["$","$1","h",{"children":[null,["$","$1","JRUpnP_XrMvDiD7w9pY7y",{"children":[["$","$L12",null,{"children":"$L13"}],null]}],null]}],false]],"m":"$undefined","G":["$14","$undefined"],"s":false,"S":true}
+15:"$Sreact.suspense"
+16:I[4911,[],"AsyncMetadata"]
+9:{}
+a:{}
+c:["$","$15",null,{"fallback":null,"children":["$","$L16",null,{"promise":"$@17"}]}]
+f:null
+13:[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","content":"width=device-width, initial-scale=1"}]]
+e:null
+17:{"metadata":[["$","title","0",{"children":"SimWork | Future of Work Simulation Platform"}],["$","meta","1",{"name":"description","content":"An immersive, AI-driven simulation platform for the future of work"}],["$","meta","2",{"name":"author","content":"SimWork Team"}],["$","meta","3",{"name":"keywords","content":"simulation, training, hiring, skills assessment, AI, future of work"}],["$","meta","4",{"name":"creator","content":"SimWork"}],["$","meta","5",{"name":"publisher","content":"SimWork"}],["$","link","6",{"rel":"icon","href":"/favicon.ico"}]],"error":null,"digest":"$undefined"}
+11:{"metadata":"$17:metadata","error":null,"digest":"$undefined"}
