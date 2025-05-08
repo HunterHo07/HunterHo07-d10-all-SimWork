@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://hunterho07.github.io/d10-all-SimWork/sitemap.xml

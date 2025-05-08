@@ -18,6 +18,7 @@ export interface User {
     notifications: boolean;
     sound: boolean;
   };
+  password?: string; // Added for demo purposes only - in a real app, passwords should never be stored in the client
 }
 
 export interface AuthState {
@@ -46,30 +47,30 @@ export async function login(username: string, password: string): Promise<AuthSta
     // For this demo, we'll fetch from our local JSON file
     const response = await fetch('/data/users.json');
     const users: User[] = await response.json();
-    
+
     // Find the user
-    const user = users.find(u => 
-      (u.username === username || u.email === username) && 
+    const user = users.find(u =>
+      (u.username === username || u.email === username) &&
       u.password === password
     );
-    
+
     if (!user) {
       throw new Error('Invalid username or password');
     }
-    
+
     // Generate a fake token
     const token = `token_${Math.random().toString(36).substring(2, 15)}`;
-    
+
     // Store auth data
     const authState: AuthState = {
       user,
       isAuthenticated: true,
       token,
     };
-    
+
     setToStorage(AUTH_TOKEN_KEY, token);
     setToStorage(USER_DATA_KEY, user);
-    
+
     return authState;
   } catch (error) {
     console.error('Login error:', error);
@@ -81,28 +82,28 @@ export async function login(username: string, password: string): Promise<AuthSta
  * Simulates a registration request
  */
 export async function register(
-  username: string, 
-  email: string, 
-  password: string, 
+  username: string,
+  email: string,
+  password: string,
   name: string,
   role: string
 ): Promise<AuthState> {
   try {
     // In a real app, this would be an API call
     // For this demo, we'll simulate a successful registration
-    
+
     // Check if username or email already exists
     const response = await fetch('/data/users.json');
     const users: User[] = await response.json();
-    
+
     if (users.some(u => u.username === username)) {
       throw new Error('Username already exists');
     }
-    
+
     if (users.some(u => u.email === email)) {
       throw new Error('Email already exists');
     }
-    
+
     // Create a new user
     const newUser: User = {
       id: `user${users.length + 1}`,
@@ -128,20 +129,20 @@ export async function register(
         sound: true,
       },
     };
-    
+
     // Generate a fake token
     const token = `token_${Math.random().toString(36).substring(2, 15)}`;
-    
+
     // Store auth data
     const authState: AuthState = {
       user: newUser,
       isAuthenticated: true,
       token,
     };
-    
+
     setToStorage(AUTH_TOKEN_KEY, token);
     setToStorage(USER_DATA_KEY, newUser);
-    
+
     return authState;
   } catch (error) {
     console.error('Registration error:', error);
@@ -163,11 +164,11 @@ export function logout(): void {
 export function checkAuth(): AuthState {
   const token = getFromStorage<string | null>(AUTH_TOKEN_KEY, null);
   const user = getFromStorage<User | null>(USER_DATA_KEY, null);
-  
+
   if (!token || !user) {
     return defaultAuthState;
   }
-  
+
   return {
     user,
     isAuthenticated: true,
@@ -180,16 +181,16 @@ export function checkAuth(): AuthState {
  */
 export function updateUser(userData: Partial<User>): void {
   const currentUser = getFromStorage<User | null>(USER_DATA_KEY, null);
-  
+
   if (!currentUser) {
     throw new Error('No user is currently logged in');
   }
-  
+
   const updatedUser = {
     ...currentUser,
     ...userData,
   };
-  
+
   setToStorage(USER_DATA_KEY, updatedUser);
 }
 
@@ -198,20 +199,20 @@ export function updateUser(userData: Partial<User>): void {
  */
 export function addUserXP(xpAmount: number): User {
   const currentUser = getFromStorage<User | null>(USER_DATA_KEY, null);
-  
+
   if (!currentUser) {
     throw new Error('No user is currently logged in');
   }
-  
+
   const newXP = currentUser.xp + xpAmount;
   const newLevel = Math.floor(Math.sqrt(newXP / 100)) + 1;
-  
+
   const updatedUser = {
     ...currentUser,
     xp: newXP,
     level: newLevel,
   };
-  
+
   setToStorage(USER_DATA_KEY, updatedUser);
   return updatedUser;
 }
@@ -221,20 +222,20 @@ export function addUserXP(xpAmount: number): User {
  */
 export function completeQuest(questId: string): User {
   const currentUser = getFromStorage<User | null>(USER_DATA_KEY, null);
-  
+
   if (!currentUser) {
     throw new Error('No user is currently logged in');
   }
-  
+
   if (currentUser.completedQuests.includes(questId)) {
     return currentUser; // Already completed
   }
-  
+
   const updatedUser = {
     ...currentUser,
     completedQuests: [...currentUser.completedQuests, questId],
   };
-  
+
   setToStorage(USER_DATA_KEY, updatedUser);
   return updatedUser;
 }
@@ -244,20 +245,20 @@ export function completeQuest(questId: string): User {
  */
 export function addBadge(badgeName: string): User {
   const currentUser = getFromStorage<User | null>(USER_DATA_KEY, null);
-  
+
   if (!currentUser) {
     throw new Error('No user is currently logged in');
   }
-  
+
   if (currentUser.badges.includes(badgeName)) {
     return currentUser; // Already has badge
   }
-  
+
   const updatedUser = {
     ...currentUser,
     badges: [...currentUser.badges, badgeName],
   };
-  
+
   setToStorage(USER_DATA_KEY, updatedUser);
   return updatedUser;
 }
@@ -267,11 +268,11 @@ export function addBadge(badgeName: string): User {
  */
 export function updatePreferences(preferences: Partial<User['preferences']>): User {
   const currentUser = getFromStorage<User | null>(USER_DATA_KEY, null);
-  
+
   if (!currentUser) {
     throw new Error('No user is currently logged in');
   }
-  
+
   const updatedUser = {
     ...currentUser,
     preferences: {
@@ -279,7 +280,7 @@ export function updatePreferences(preferences: Partial<User['preferences']>): Us
       ...preferences,
     },
   };
-  
+
   setToStorage(USER_DATA_KEY, updatedUser);
   return updatedUser;
 }
