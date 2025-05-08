@@ -120,7 +120,7 @@ export default function PricingPage() {
     <div className="pt-24 pb-16 px-4">
       <div className="container mx-auto max-w-7xl">
         {/* Hero section */}
-        <motion.div 
+        <motion.div
           className="text-center mb-16"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -132,7 +132,7 @@ export default function PricingPage() {
           <p className="text-lg text-gray-300 max-w-2xl mx-auto mb-8">
             Choose the plan that fits your organization's needs and scale as you grow.
           </p>
-          
+
           {/* Billing toggle */}
           <div className="flex items-center justify-center gap-4">
             <span className={`text-sm ${!isYearly ? 'text-white' : 'text-gray-400'}`}>Monthly</span>
@@ -152,11 +152,11 @@ export default function PricingPage() {
             </span>
           </div>
         </motion.div>
-        
+
         {/* Pricing cards */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
           {pricingPlans.map((plan, index) => (
-            <motion.div 
+            <motion.div
               key={plan.id}
               className={`relative ${
                 plan.popular ? 'md:-mt-4 md:mb-4' : ''
@@ -166,19 +166,19 @@ export default function PricingPage() {
               transition={{ duration: 0.5, delay: index * 0.1 }}
             >
               {plan.popular && (
-                <div className="absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-gradient-to-r from-purple-500 to-pink-500 text-white text-xs font-bold px-4 py-1 rounded-full">
+                <div className="absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-1/2 -mt-2 bg-gradient-to-r from-purple-500 to-pink-500 text-white text-xs font-bold px-4 py-1.5 rounded-full z-10 shadow-lg">
                   Most Popular
                 </div>
               )}
-              
+
               <div className={`h-full glass-card p-8 flex flex-col ${
-                plan.popular ? 'border-2 border-purple-500/50' : ''
+                plan.popular ? 'border-2 border-purple-500/50 mt-6 pt-6' : ''
               }`}>
                 <div className="mb-6">
                   <h3 className="text-2xl font-bold mb-2">{plan.name}</h3>
                   <p className="text-gray-400 text-sm">{plan.description}</p>
                 </div>
-                
+
                 <div className="mb-6">
                   {plan.monthlyPrice !== null && plan.yearlyPrice !== null ? (
                     <>
@@ -195,7 +195,7 @@ export default function PricingPage() {
                     <span className="text-4xl font-bold">{plan.priceLabel}</span>
                   )}
                 </div>
-                
+
                 <div className="mb-6">
                   <h4 className="text-sm font-semibold uppercase text-gray-400 mb-3">Features</h4>
                   <ul className="mb-6 space-y-3">
@@ -208,7 +208,7 @@ export default function PricingPage() {
                       </li>
                     ))}
                   </ul>
-                  
+
                   {plan.limitations.length > 0 && (
                     <>
                       <h4 className="text-sm font-semibold uppercase text-gray-400 mb-3">Limitations</h4>
@@ -225,9 +225,9 @@ export default function PricingPage() {
                     </>
                   )}
                 </div>
-                
+
                 <div className="mt-auto">
-                  <Link 
+                  <Link
                     href={plan.id === 'starter' ? '/dashboard' : '/contact'}
                     className={`w-full py-3 rounded-lg text-center font-medium transition-colors ${
                       plan.popular
@@ -242,7 +242,7 @@ export default function PricingPage() {
             </motion.div>
           ))}
         </div>
-        
+
         {/* Comparison table */}
         <motion.div
           className="mb-16"
@@ -251,7 +251,7 @@ export default function PricingPage() {
           transition={{ duration: 0.5, delay: 0.4 }}
         >
           <h2 className="text-2xl md:text-3xl font-bold mb-8 text-center">Plan Comparison</h2>
-          
+
           <div className="overflow-x-auto">
             <table className="w-full glass-card">
               <thead>
@@ -337,7 +337,7 @@ export default function PricingPage() {
             </table>
           </div>
         </motion.div>
-        
+
         {/* FAQs */}
         <motion.div
           className="mb-16"
@@ -346,7 +346,7 @@ export default function PricingPage() {
           transition={{ duration: 0.5, delay: 0.5 }}
         >
           <h2 className="text-2xl md:text-3xl font-bold mb-8 text-center">Frequently Asked Questions</h2>
-          
+
           <div className="space-y-4">
             {faqs.map((faq, index) => (
               <div key={index} className="glass-card overflow-hidden">
@@ -366,7 +366,7 @@ export default function PricingPage() {
                     <path fillRule="evenodd" d="M12.53 16.28a.75.75 0 01-1.06 0l-7.5-7.5a.75.75 0 011.06-1.06L12 14.69l6.97-6.97a.75.75 0 111.06 1.06l-7.5 7.5z" clipRule="evenodd" />
                   </svg>
                 </button>
-                
+
                 <motion.div
                   initial={false}
                   animate={{ height: expandedFaq === index ? 'auto' : 0, opacity: expandedFaq === index ? 1 : 0 }}
@@ -381,7 +381,7 @@ export default function PricingPage() {
             ))}
           </div>
         </motion.div>
-        
+
         {/* CTA section */}
         <motion.div
           className="glass-card p-8 text-center"

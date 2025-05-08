@@ -164,13 +164,13 @@ export default function PricingSection() {
               }`}
             >
               {plan.popular && (
-                <div className="absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-gradient-to-r from-purple-500 to-pink-500 text-white text-xs font-bold px-4 py-1 rounded-full z-10">
+                <div className="absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-1/2 -mt-2 bg-gradient-to-r from-purple-500 to-pink-500 text-white text-xs font-bold px-4 py-1.5 rounded-full z-10 shadow-lg">
                   Most Popular
                 </div>
               )}
 
               <div className={`w-full glass-card p-6 md:p-8 flex flex-col ${
-                plan.popular ? 'border-2 border-purple-500/50' : ''
+                plan.popular ? 'border-2 border-purple-500/50 mt-6 pt-6' : ''
               }`}>
                 <div className="mb-4">
                   <h3 className="text-xl md:text-2xl font-bold mb-2">{plan.name}</h3>
