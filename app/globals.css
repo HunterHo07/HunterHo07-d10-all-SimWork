@@ -1,26 +1,250 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  /* Base colors */
+  --background: #030014;
+  --foreground: #e2e8f0;
+
+  /* Primary colors */
+  --primary: #6d28d9;
+  --primary-light: #8b5cf6;
+  --primary-dark: #5b21b6;
+
+  /* Accent colors */
+  --accent-1: #06b6d4;
+  --accent-2: #ec4899;
+  --accent-3: #10b981;
+
+  /* UI colors */
+  --card-bg: rgba(17, 17, 51, 0.7);
+  --nav-bg: rgba(10, 10, 40, 0.8);
+  --glass-bg: rgba(20, 20, 60, 0.2);
+  --glass-border: rgba(255, 255, 255, 0.1);
+  --glass-highlight: rgba(255, 255, 255, 0.05);
+
+  /* Gradients */
+  --gradient-1: linear-gradient(to right, #6d28d9, #8b5cf6);
+  --gradient-2: linear-gradient(to right, #06b6d4, #0ea5e9);
+  --gradient-3: linear-gradient(to right, #ec4899, #f43f5e);
+
+  /* Shadows */
+  --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.2);
+  --shadow-md: 0 4px 16px rgba(0, 0, 0, 0.3);
+  --shadow-lg: 0 8px 32px rgba(0, 0, 0, 0.4);
+  --shadow-glow: 0 0 20px rgba(139, 92, 246, 0.5);
+
+  /* Animation */
+  --transition-fast: 0.2s;
+  --transition-medium: 0.4s;
+  --transition-slow: 0.8s;
+
+  /* Fonts */
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --font-sans: var(--font-sans);
+  --font-mono: var(--font-mono);
 }
 
-@media (prefers-color-scheme: dark) {
+/* Light mode overrides */
+@media (prefers-color-scheme: light) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --background: #f8fafc;
+    --foreground: #0f172a;
+    --card-bg: rgba(255, 255, 255, 0.8);
+    --nav-bg: rgba(255, 255, 255, 0.8);
+    --glass-bg: rgba(255, 255, 255, 0.2);
+    --glass-border: rgba(0, 0, 0, 0.1);
+    --glass-highlight: rgba(255, 255, 255, 0.8);
   }
 }
 
+/* Global styles */
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-sans);
+  overflow-x: hidden;
+  background-image:
+    radial-gradient(circle at 10% 20%, rgba(109, 40, 217, 0.1) 0%, transparent 20%),
+    radial-gradient(circle at 90% 50%, rgba(6, 182, 212, 0.1) 0%, transparent 25%),
+    radial-gradient(circle at 50% 80%, rgba(236, 72, 153, 0.1) 0%, transparent 30%);
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--background);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--primary);
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--primary-light);
+}
+
+/* Glass effect */
+.glass {
+  background: var(--glass-bg);
+  backdrop-filter: blur(12px);
+  border: 1px solid var(--glass-border);
+  box-shadow: var(--shadow-md);
+}
+
+.glass-card {
+  background: var(--card-bg);
+  backdrop-filter: blur(12px);
+  border: 1px solid var(--glass-border);
+  border-radius: 12px;
+  box-shadow: var(--shadow-md);
+  transition: all var(--transition-medium) ease;
+}
+
+.glass-card:hover {
+  box-shadow: var(--shadow-lg), var(--shadow-glow);
+  transform: translateY(-5px);
+}
+
+/* Gradient text */
+.gradient-text {
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  background-image: var(--gradient-1);
+}
+
+.gradient-text-2 {
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  background-image: var(--gradient-2);
+}
+
+.gradient-text-3 {
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  background-image: var(--gradient-3);
+}
+
+/* Gradient borders */
+.gradient-border {
+  position: relative;
+  border-radius: 12px;
+  padding: 1px;
+  background: var(--gradient-1);
+}
+
+.gradient-border::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 12px;
+  padding: 1px;
+  background: var(--gradient-1);
+  mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+}
+
+/* Animated background */
+.animated-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+  opacity: 0.2;
+  background:
+    linear-gradient(45deg, var(--primary-dark) 25%, transparent 25%, transparent 75%, var(--primary-dark) 75%, var(--primary-dark)),
+    linear-gradient(45deg, var(--primary-dark) 25%, transparent 25%, transparent 75%, var(--primary-dark) 75%, var(--primary-dark));
+  background-size: 60px 60px;
+  background-position: 0 0, 30px 30px;
+  animation: animatedBackground 20s linear infinite;
+}
+
+@keyframes animatedBackground {
+  from {
+    background-position: 0 0, 30px 30px;
+  }
+  to {
+    background-position: 60px 60px, 90px 90px;
+  }
+}
+
+/* Glow effects */
+.glow {
+  box-shadow: 0 0 15px var(--primary-light);
+}
+
+.glow-text {
+  text-shadow: 0 0 10px var(--primary-light);
+}
+
+/* Futuristic button */
+.btn-future {
+  position: relative;
+  background: var(--primary);
+  color: white;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  overflow: hidden;
+  transition: all var(--transition-fast) ease;
+}
+
+.btn-future::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.2),
+    transparent
+  );
+  transition: all var(--transition-fast);
+}
+
+.btn-future:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(109, 40, 217, 0.4);
+}
+
+.btn-future:hover::before {
+  left: 100%;
+  transition: all 0.7s;
+}
+
+/* Grid lines background */
+.grid-lines {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  background-size: 50px 50px;
+  background-image:
+    linear-gradient(to right, rgba(109, 40, 217, 0.05) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(109, 40, 217, 0.05) 1px, transparent 1px);
+  opacity: 0.3;
 }

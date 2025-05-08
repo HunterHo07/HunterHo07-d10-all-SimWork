@@ -1,0 +1,126 @@
+[
+  {
+    "id": "dev-quest-1",
+    "title": "Debug the Authentication Flow",
+    "roleId": "developer",
+    "difficulty": "medium",
+    "description": "Our login system has a critical bug. Users can log in but are immediately logged out. Find and fix the issue in the authentication flow.",
+    "objectives": [
+      "Identify the bug in the authentication code",
+      "Fix the token storage mechanism",
+      "Ensure the session persists across page refreshes",
+      "Add proper error handling"
+    ],
+    "tools": ["code-editor", "terminal"],
+    "timeLimit": 1800,
+    "reward": {
+      "xp": 150,
+      "badge": "Bug Squasher"
+    },
+    "codeSnippet": "function login(username, password) {\n  // Authenticate user\n  const token = authenticateUser(username, password);\n  \n  // Store token in sessionStorage instead of localStorage\n  sessionStorage.setItem('auth_token', token);\n  \n  // Redirect to dashboard\n  window.location.href = '/dashboard';\n}\n\nfunction checkAuth() {\n  // Bug: We're checking localStorage but storing in sessionStorage\n  const token = localStorage.getItem('auth_token');\n  return !!token;\n}"
+  },
+  {
+    "id": "design-quest-1",
+    "title": "Create a Futuristic Logo",
+    "roleId": "designer",
+    "difficulty": "hard",
+    "description": "Design a futuristic logo for QuantumTech, a company specializing in quantum computing solutions. The logo should convey innovation, technology, and a sense of the future.",
+    "objectives": [
+      "Create a unique and memorable logo",
+      "Use a futuristic color palette",
+      "Ensure the logo works in both light and dark modes",
+      "Provide variations for different use cases (app icon, website, print)"
+    ],
+    "tools": ["design-canvas"],
+    "timeLimit": 2400,
+    "reward": {
+      "xp": 200,
+      "badge": "Visionary Designer"
+    },
+    "designBrief": "QuantumTech is revolutionizing computing with quantum solutions. Their target audience includes tech companies, research institutions, and forward-thinking enterprises. The logo should incorporate elements of quantum mechanics (superposition, entanglement) in an abstract, visually appealing way. The primary colors should include deep blues and vibrant purples, with accent colors that pop against both light and dark backgrounds."
+  },
+  {
+    "id": "pm-quest-1",
+    "title": "Resolve Resource Conflict",
+    "roleId": "pm",
+    "difficulty": "medium",
+    "description": "Two critical projects are competing for the same developer resources. You need to create a resource allocation plan that ensures both projects meet their deadlines.",
+    "objectives": [
+      "Analyze the resource requirements for both projects",
+      "Identify critical path tasks",
+      "Create a balanced resource allocation plan",
+      "Document potential risks and mitigation strategies"
+    ],
+    "tools": ["gantt-chart", "resource-planner"],
+    "timeLimit": 1800,
+    "reward": {
+      "xp": 150,
+      "badge": "Resource Wizard"
+    },
+    "projectData": {
+      "project1": {
+        "name": "E-commerce Platform Upgrade",
+        "deadline": "2 weeks",
+        "priority": "high",
+        "resources": ["Frontend Dev (2)", "Backend Dev (1)", "QA (1)"]
+      },
+      "project2": {
+        "name": "Mobile App Launch",
+        "deadline": "3 weeks",
+        "priority": "medium",
+        "resources": ["Frontend Dev (1)", "Backend Dev (2)", "QA (1)"]
+      }
+    }
+  },
+  {
+    "id": "data-quest-1",
+    "title": "Clean and Normalize Customer Data",
+    "roleId": "data-entry",
+    "difficulty": "easy",
+    "description": "Our customer database contains duplicate entries and inconsistent formatting. Clean and normalize the data to ensure accuracy and consistency.",
+    "objectives": [
+      "Identify and merge duplicate customer records",
+      "Standardize phone number and address formats",
+      "Correct spelling errors in customer names",
+      "Categorize customers by region and purchase history"
+    ],
+    "tools": ["data-processor", "spreadsheet"],
+    "timeLimit": 1200,
+    "reward": {
+      "xp": 100,
+      "badge": "Data Cleaner"
+    },
+    "sampleData": [
+      {"id": 1, "name": "John Smith", "phone": "555-123-4567", "address": "123 Main St, New York, NY"},
+      {"id": 2, "name": "Jane Doe", "phone": "5551234567", "address": "456 Oak Ave, Los Angeles, CA"},
+      {"id": 3, "name": "John Smyth", "phone": "(555) 123-4567", "address": "123 Main Street, New York, NY"},
+      {"id": 4, "name": "J. Doe", "phone": "555.123.4567", "address": "456 Oak Avenue, Los Angeles, California"}
+    ]
+  },
+  {
+    "id": "ai-quest-1",
+    "title": "Optimize AI Prompt for Accuracy",
+    "roleId": "ai-engineer",
+    "difficulty": "hard",
+    "description": "Our AI assistant is providing inconsistent responses to customer inquiries. Optimize the prompts to improve accuracy and consistency.",
+    "objectives": [
+      "Analyze current prompt structure and identify weaknesses",
+      "Rewrite prompts to improve clarity and context",
+      "Test prompts against sample queries",
+      "Measure and document improvement in response accuracy"
+    ],
+    "tools": ["prompt-editor", "ai-simulator"],
+    "timeLimit": 2400,
+    "reward": {
+      "xp": 200,
+      "badge": "Prompt Master"
+    },
+    "currentPrompt": "Answer the user's question about our product. Our product is a smart home system that controls lighting, temperature, and security.",
+    "sampleQueries": [
+      "How do I connect my smart home system to my phone?",
+      "Can I control multiple homes with one account?",
+      "What happens if my internet goes down?",
+      "Is my data secure?"
+    ]
+  }
+]
