@@ -1,0 +1,24 @@
+1:"$Sreact.fragment"
+2:I[9697,["694","static/chunks/694-8dd55d8bc1b85760.js","874","static/chunks/874-6052627df6fde20c.js","177","static/chunks/app/layout-6e0f72d5db5a7f73.js"],"default"]
+3:I[7555,[],""]
+4:I[1295,[],""]
+5:I[8317,["694","static/chunks/694-8dd55d8bc1b85760.js","874","static/chunks/874-6052627df6fde20c.js","177","static/chunks/app/layout-6e0f72d5db5a7f73.js"],"default"]
+6:I[894,[],"ClientPageRoot"]
+7:I[8239,["592","static/chunks/c15bf2b0-d67976aba37a88f8.js","694","static/chunks/694-8dd55d8bc1b85760.js","874","static/chunks/874-6052627df6fde20c.js","585","static/chunks/585-4dbf3f2a4a66bded.js","974","static/chunks/app/page-d90835f84df8259b.js"],"default"]
+a:I[9665,[],"MetadataBoundary"]
+c:I[9665,[],"OutletBoundary"]
+f:I[4911,[],"AsyncMetadataOutlet"]
+11:I[9665,[],"ViewportBoundary"]
+13:I[6614,[],""]
+:HL["/_next/static/css/c998de380f8dc2d3.css","style"]
+0:{"P":null,"b":"XLGudQL7cDHBLwXEJnKSd","p":"","c":["",""],"i":false,"f":[[["",{"children":["__PAGE__",{}]},"$undefined","$undefined",true],["",["$","$1","c",{"children":[[["$","link","0",{"rel":"stylesheet","href":"/_next/static/css/c998de380f8dc2d3.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}]],["$","html",null,{"lang":"en","children":["$","body",null,{"className":"__variable_5cfdac __variable_9a8899 antialiased min-h-screen flex flex-col","children":[["$","div",null,{"className":"grid-lines"}],["$","$L2",null,{}],["$","main",null,{"className":"flex-grow","children":["$","$L3",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L4",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":[[["$","title",null,{"children":"404: This page could not be found."}],["$","div",null,{"style":{"fontFamily":"system-ui,\"Segoe UI\",Roboto,Helvetica,Arial,sans-serif,\"Apple Color Emoji\",\"Segoe UI Emoji\"","height":"100vh","textAlign":"center","display":"flex","flexDirection":"column","alignItems":"center","justifyContent":"center"},"children":["$","div",null,{"children":[["$","style",null,{"dangerouslySetInnerHTML":{"__html":"body{color:#000;background:#fff;margin:0}.next-error-h1{border-right:1px solid rgba(0,0,0,.3)}@media (prefers-color-scheme:dark){body{color:#fff;background:#000}.next-error-h1{border-right:1px solid rgba(255,255,255,.3)}}"}}],["$","h1",null,{"className":"next-error-h1","style":{"display":"inline-block","margin":"0 20px 0 0","padding":"0 23px 0 0","fontSize":24,"fontWeight":500,"verticalAlign":"top","lineHeight":"49px"},"children":404}],["$","div",null,{"style":{"display":"inline-block"},"children":["$","h2",null,{"style":{"fontSize":14,"fontWeight":400,"lineHeight":"49px","margin":0},"children":"This page could not be found."}]}]]}]}]],[]],"forbidden":"$undefined","unauthorized":"$undefined"}]}],["$","$L5",null,{}]]}]}]]}],{"children":["__PAGE__",["$","$1","c",{"children":[["$","$L6",null,{"Component":"$7","searchParams":{},"params":{},"promises":["$@8","$@9"]}],["$","$La",null,{"children":"$Lb"}],null,["$","$Lc",null,{"children":["$Ld","$Le",["$","$Lf",null,{"promise":"$@10"}]]}]]}],{},null,false]},null,false],["$","$1","h",{"children":[null,["$","$1","ckqorUb1w7S1nIoItuF9c",{"children":[["$","$L11",null,{"children":"$L12"}],null]}],null]}],false]],"m":"$undefined","G":["$13","$undefined"],"s":false,"S":true}
+14:"$Sreact.suspense"
+15:I[4911,[],"AsyncMetadata"]
+8:{}
+9:{}
+b:["$","$14",null,{"fallback":null,"children":["$","$L15",null,{"promise":"$@16"}]}]
+e:null
+12:[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","content":"width=device-width, initial-scale=1"}]]
+d:null
+16:{"metadata":[["$","title","0",{"children":"SimWork | Future of Work Simulation Platform"}],["$","meta","1",{"name":"description","content":"An immersive, AI-driven simulation platform for the future of work"}],["$","meta","2",{"name":"author","content":"SimWork Team"}],["$","meta","3",{"name":"keywords","content":"simulation, training, hiring, skills assessment, AI, future of work"}],["$","meta","4",{"name":"creator","content":"SimWork"}],["$","meta","5",{"name":"publisher","content":"SimWork"}],["$","link","6",{"rel":"icon","href":"/favicon.ico","type":"image/x-icon","sizes":"16x16"}],["$","link","7",{"rel":"icon","href":"/favicon.ico"}]],"error":null,"digest":"$undefined"}
+10:{"metadata":"$16:metadata","error":null,"digest":"$undefined"}

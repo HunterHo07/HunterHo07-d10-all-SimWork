@@ -1,0 +1,112 @@
+[
+  {
+    "id": "developer",
+    "title": "Developer",
+    "description": "Write, debug, and optimize code across various languages and frameworks.",
+    "icon": "code",
+    "color": "#3B82F6",
+    "skills": [
+      "JavaScript/TypeScript",
+      "React",
+      "Node.js",
+      "Python",
+      "Database Management",
+      "API Integration",
+      "Testing",
+      "Version Control"
+    ],
+    "stationPosition": {
+      "x": 10,
+      "y": 0,
+      "z": 5
+    }
+  },
+  {
+    "id": "designer",
+    "title": "Designer",
+    "description": "Create visually stunning and user-friendly interfaces and assets.",
+    "icon": "palette",
+    "color": "#EC4899",
+    "skills": [
+      "UI Design",
+      "UX Research",
+      "Prototyping",
+      "Visual Design",
+      "Design Systems",
+      "Animation",
+      "Accessibility",
+      "Brand Identity"
+    ],
+    "stationPosition": {
+      "x": -10,
+      "y": 0,
+      "z": 5
+    }
+  },
+  {
+    "id": "pm",
+    "title": "Project Manager",
+    "description": "Coordinate teams, track progress, and ensure project success.",
+    "icon": "chart-gantt",
+    "color": "#10B981",
+    "skills": [
+      "Task Management",
+      "Resource Allocation",
+      "Risk Assessment",
+      "Stakeholder Communication",
+      "Agile Methodologies",
+      "Budgeting",
+      "Documentation",
+      "Team Leadership"
+    ],
+    "stationPosition": {
+      "x": 0,
+      "y": 0,
+      "z": 10
+    }
+  },
+  {
+    "id": "data-entry",
+    "title": "Data Entry Specialist",
+    "description": "Process and manage data with accuracy and efficiency.",
+    "icon": "database",
+    "color": "#6366F1",
+    "skills": [
+      "Data Validation",
+      "Form Processing",
+      "Spreadsheet Management",
+      "Data Cleaning",
+      "Record Keeping",
+      "Attention to Detail",
+      "Process Optimization",
+      "Data Security"
+    ],
+    "stationPosition": {
+      "x": -5,
+      "y": 0,
+      "z": -5
+    }
+  },
+  {
+    "id": "ai-engineer",
+    "title": "AI Engineer",
+    "description": "Develop and optimize AI models and systems.",
+    "icon": "brain",
+    "color": "#8B5CF6",
+    "skills": [
+      "Prompt Engineering",
+      "Machine Learning",
+      "Data Analysis",
+      "Model Training",
+      "AI Integration",
+      "Natural Language Processing",
+      "Computer Vision",
+      "Ethical AI Development"
+    ],
+    "stationPosition": {
+      "x": 5,
+      "y": 0,
+      "z": -5
+    }
+  }
+]

@@ -1,0 +1,122 @@
+[
+  {
+    "id": "user1",
+    "username": "techdev42",
+    "email": "techdev42@example.com",
+    "password": "password123",
+    "name": "Alex Johnson",
+    "role": "developer",
+    "avatar": "/images/avatars/avatar1.png",
+    "level": 5,
+    "xp": 750,
+    "badges": ["Code Ninja", "Bug Hunter", "API Master"],
+    "completedQuests": ["dev-quest-1"],
+    "stats": {
+      "accuracy": 87,
+      "speed": 92,
+      "problemSolving": 85,
+      "teamwork": 78
+    },
+    "preferences": {
+      "theme": "dark",
+      "notifications": true,
+      "sound": true
+    }
+  },
+  {
+    "id": "user2",
+    "username": "designguru",
+    "email": "designguru@example.com",
+    "password": "password123",
+    "name": "Sam Rivera",
+    "role": "designer",
+    "avatar": "/images/avatars/avatar2.png",
+    "level": 7,
+    "xp": 1250,
+    "badges": ["UI Wizard", "Color Master", "Accessibility Champion"],
+    "completedQuests": ["design-quest-1"],
+    "stats": {
+      "creativity": 95,
+      "attention": 88,
+      "userEmpathy": 92,
+      "technicalSkill": 84
+    },
+    "preferences": {
+      "theme": "light",
+      "notifications": true,
+      "sound": false
+    }
+  },
+  {
+    "id": "user3",
+    "username": "projectpro",
+    "email": "projectpro@example.com",
+    "password": "password123",
+    "name": "Taylor Kim",
+    "role": "pm",
+    "avatar": "/images/avatars/avatar3.png",
+    "level": 9,
+    "xp": 2100,
+    "badges": ["Deadline Crusher", "Team Leader", "Risk Manager"],
+    "completedQuests": ["pm-quest-1"],
+    "stats": {
+      "organization": 94,
+      "communication": 91,
+      "leadership": 88,
+      "problemSolving": 86
+    },
+    "preferences": {
+      "theme": "system",
+      "notifications": true,
+      "sound": true
+    }
+  },
+  {
+    "id": "user4",
+    "username": "datamaster",
+    "email": "datamaster@example.com",
+    "password": "password123",
+    "name": "Jordan Patel",
+    "role": "data-entry",
+    "avatar": "/images/avatars/avatar4.png",
+    "level": 4,
+    "xp": 550,
+    "badges": ["Accuracy King", "Speed Demon", "Detail Detective"],
+    "completedQuests": ["data-quest-1"],
+    "stats": {
+      "accuracy": 96,
+      "speed": 89,
+      "attention": 94,
+      "consistency": 92
+    },
+    "preferences": {
+      "theme": "light",
+      "notifications": false,
+      "sound": false
+    }
+  },
+  {
+    "id": "user5",
+    "username": "aigenius",
+    "email": "aigenius@example.com",
+    "password": "password123",
+    "name": "Morgan Chen",
+    "role": "ai-engineer",
+    "avatar": "/images/avatars/avatar5.png",
+    "level": 8,
+    "xp": 1800,
+    "badges": ["Prompt Engineer", "Model Whisperer", "AI Ethicist"],
+    "completedQuests": ["ai-quest-1"],
+    "stats": {
+      "technicalSkill": 93,
+      "creativity": 87,
+      "problemSolving": 91,
+      "attention": 85
+    },
+    "preferences": {
+      "theme": "dark",
+      "notifications": true,
+      "sound": true
+    }
+  }
+]
